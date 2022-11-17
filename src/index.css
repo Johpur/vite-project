@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .App {
+    background-image: url("./assets/bg.jpg");
+    @apply bg-fixed h-screen bg-center bg-cover flex justify-center p-24 text-center;
+  }
+
+  .card {
+    @apply rounded-2xl p-12 max-w-5xl w-full bg-clip-padding backdrop-filter backdrop-blur-xl bg-white bg-opacity-30 border border-gray-50/30 shadow-lg;
+  }
+  .card h2 {
+    @apply tracking-wide font-semibold  text-center text-4xl mb-12 text-blue-500;
+  }
+
+  .card-input {
+    @apply border-blue-500 shadow-md rounded-lg border w-full;
+  }
+  .card-button {
+    @apply inline-flex items-center rounded-md border border-transparent bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none h-full shadow-md;
+  }
+
+  .task {
+    @apply bg-white shadow-md rounded-lg p-4 mb-4 text-lg flex justify-between border-gray-300 border text-gray-800;
+  }
+  .task div {
+    @apply flex items-center gap-x-2;
+  }
+  .task-id {
+    @apply italic text-gray-500 text-sm;
+  }
+  .task .done .task-text {
+    @apply opacity-30 line-through;
+  }
+
+  .icon-container {
+    @apply flex;
+  }
+
+  .icon-container span {
+    @apply cursor-pointer text-gray-400 h-6 w-6;
+  }
+}
